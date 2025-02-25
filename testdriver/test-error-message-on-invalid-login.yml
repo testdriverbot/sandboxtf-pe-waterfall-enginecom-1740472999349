@@ -1,0 +1,33 @@
+version: 4.2.12
+session: 67bd84c9e335a37c35651a2c
+steps:
+  - prompt: Enter invalid credentials in the login form.
+    commands:
+      - command: hover-text
+        text: Other Users
+        description: button to access login form for other users
+        action: click
+  - prompt: Enter invalid credentials in the login form.
+    commands:
+      - command: hover-text
+        text: Enter your email
+        description: email input field
+        action: click
+      - command: type
+        text: invalid@example.com
+      - command: hover-text
+        text: Password
+        description: password input field
+        action: click
+      - command: type
+        text: wrongpassword
+      - command: hover-text
+        text: Log In
+        description: log in button
+        action: click
+  - prompt: Click on "Login."
+    commands:
+      - command: hover-text
+        text: Log In
+        description: log in button
+        action: click
