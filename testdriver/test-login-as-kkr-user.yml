@@ -1,0 +1,32 @@
+version: 4.2.12
+session: 67bd84c78dfb545182f1817b
+steps:
+  - prompt: Click on the "KKR Users" button.
+    commands:
+      - command: hover-text
+        text: KKR Users
+        description: button to login as KKR Users
+        action: click
+  - prompt: Assert that the login page for KKR users is displayed.
+    commands:
+      - command: assert
+        expect: the login page for KKR users is displayed with "Sign in" and "KKR"
+  - prompt: Enter valid credentials.
+    commands:
+      - command: hover-text
+        text: username@kkr.com
+        description: email input field
+        action: click
+      - command: type
+        text: validuser@kkr.com
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: ValidPassword123
+  - prompt: Click on "Login."
+    commands:
+      - command: hover-text
+        text: Next
+        description: button to proceed after entering credentials
+        action: click
