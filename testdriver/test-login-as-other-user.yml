@@ -1,0 +1,9 @@
+version: 4.2.12
+session: 67bd84c4e335a37c35651a27
+steps:
+  - prompt: Click on the "Other Users" button.
+    commands:
+      - command: hover-text
+        text: Other Users
+        description: button to login as other users
+        action: click
